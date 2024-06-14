@@ -1,7 +1,9 @@
+"""A Django view that renders the home page."""
 from django.shortcuts import render
-from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the e_store index.")
 
-# Create your views here.
+
+def home(request):
+    """A view that displays the home page."""
+    return render(request, 'home.html')
+
