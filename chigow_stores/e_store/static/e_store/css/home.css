@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    color: #1E2832;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------common styles for components----- */
+a:hover{
+    color: FF6F61;
+
+}
+button:hover{
+    background-color: #FF6F61;
+    transition: 0.5s;
+}
+
+
+
+/* --------top -nav section ------------ */
+.top-section{
+    margin: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    position: relative;
+}
+
+.frame-1,
+.frame-2 {
+    position: absolute;
+    height: 40%;
+    width: 20%;
+}
+
+.frame-2 {
+    bottom: 15%;
+    right: -4%;
+    background-image: url('../images/Frame.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-40deg);
+}
+
+.frame-1 {
+    bottom: 10%;
+    left: 0;
+    height: 15%;
+    width: 10%;
+    background-image: url('../images/Frame1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+nav{
+    width: 100%;
+    height: 15vh;
+}
+
+.nav-first {
+    height: 50%;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.search{
+    width: 18%;
+}
+
+.logo {
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    text-wrap: nowrap;
+}
+
+.logo p {
+    margin: 0;
+}
+
+.cart-profile {
+    width: 18%;
+}
+
+.icon-text {
+    text-transform: lowercase;
+    font-size: 1rem;
+}
+
+.cart-profile ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-second{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nav-second ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.nav-second ul li a{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0.5rem;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+}
+
+.menu{
+    display: none;
+}
+
+/* ------hero section-- */
+.hero {
+    height: 85vh;
+    position: relative;
+}
+
+.hero-container {
+    margin: auto auto;
+    height: 100%;
+}
+
+.hero-txt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+}
+
+.hero-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 74px;
+    padding: 1.5rem;
+}
+
+.hero-subtitle {
+    font-family: Roboto;
+    font-size: 18px;
+    padding: 1.5rem;
+}
+
+.animated-text {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.delay-2 {
+    animation-timing-function: 1s;
+}
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.hero-btn {
+    font-size: 1.2rem;
+    width: 35%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    background-color: #1E2832;
+    color: #FFFFFF;
+    margin-left: 2rem;
+}
+
+.hero-btn i {
+    color: #FFFFFF;
+    padding-right: 0.9rem;
+}
+
+
+.hero-img-div{
+    margin-top: 5%;
+    height: 70%;
+}
+.hero-image{
+    height: 100%;
+    width: 100% ;
+}
+
+.animated-img {
+    opacity: 0;
+    transform: translateX(200%);
+    animation: slideLeft 1s forwards;
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-img{
+    height: 100%;
+    width: auto;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+
+@media (min-width: 320px) {
+    /* CSS rules for small phones */
+    .hero-title{
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 375px) {
+    /* CSS rules for standard phones */
+}
+
+@media (min-width: 414px) {
+    /* CSS rules for larger phones */
+}
+
+
+@media (min-width: 576px) {
+    /* CSS rules for standard tablets and small desktops */
+}
+
+
+/* Small devices (tablets, 576px and up) */
+@media (max-width: 768px) {
+    /* CSS rules for small tablets */
+    /* --top section--- */
+    .top-section {
+            width: 100vw;
+    }
+
+    .frame-1,
+    .frame-2{
+        display: none;
+    }
+
+
+    nav{
+        height: 70px;
+    }
+
+    .nav-second ul{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .nav-first{
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .cart-profile{
+        width: 15%;
+    }
+
+    .icon-text{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        padding: 0;
+    }
+
+    .menu i{
+        font-size: 1rem;
+    }
+
+
+    /* ---hero section----- */
+    .hero{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../images/hero-img.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero-container{
+        width: 100%;
+    }
+
+    .background-tint {
+        background-color: rgba(0, 0, 0, 0.125);
+        background-blend-mode: multiply;
+    }
+
+    .hero-img-div{
+        display: none;
+    }
+
+    .hero-text{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto auto;
+        padding: 0;
+        background-color: red;
+    }
+
+    .hero-title{
+        color: #FFFFFF;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+    }
+
+    .hero-btn{
+        width: 60%;
+    }
+
+
+    /* -offcanvas -- */
+    .offcanvas-body a:hover{
+        color: #FF6F61;
+
+    }
+}
+
+@media (max-width: 991px) {
+    /* --top section--- */
+    .nav-first{
+        width: 100%;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        padding: 0;
+    }
+    .menu i{
+        font-size: 1rem;
+    }
+
+    .cart-profile{
+        width: 15%;
+    }
+
+    .cart-profile ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .icon-text{
+        display: none;
+    }
+
+}
